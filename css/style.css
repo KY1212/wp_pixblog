@@ -1,0 +1,240 @@
+/*global*/
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  color: #333;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1020px;
+  width: 96%;
+  margin: auto;
+}
+
+.contents .topPost {
+  height: 360px;
+  background-image: url(../img/sample03.jpg);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  color: #fff;
+  padding: 0 20px 0;
+  font-size: 18px;
+}
+
+.contents .topPost .date {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.contents .topPost .description {
+  height: 82px;
+  line-height: 1.67;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.backgroundImg {
+  background-size: cover;
+  background-position: center;
+}
+
+.btn {
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #f3bf27;
+  padding: 0 20px;
+  font-size: 12px;
+}
+
+.tag {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.container .tag li+li {
+  margin-left: 10px;
+}
+
+
+/*container*/
+.container {
+  margin-top: 30px;
+}
+
+/*header*/
+header {
+  color: #333;
+  border-bottom: solid 1px #eeeeee;
+}
+
+header .inner {
+  align-items: center;
+  padding: 10px 0;
+}
+
+header .logoWrap {
+  display: flex;
+  align-items: center;
+}
+
+header .image {
+  width: 252px;
+}
+
+header .logoWrap .subTitle {
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+header ul {
+  display: flex;
+  font-size: 18px;
+}
+
+header li+li {
+  margin-left: 20px;
+}
+
+header .toggle {
+  display: none;
+}
+
+/*contents*/
+.container .contents{
+  max-width: 640px;
+}
+
+
+
+.container .contents .postWrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.container .contents .post {
+  width: 305px;
+  margin-bottom: 30px;
+}
+
+.container .contents .post .date,
+.container .contents .post .description {
+  margin-top: 15px;
+}
+
+.container .contents .post:nth-child(2n) {
+  margin-left: 30px;
+}
+
+/*sidebar*/
+.container .sidebar{
+  background-color: #f9f9f9;
+  height: 616px;
+  width: 320px;
+  font-size: 14px;
+  margin-left: 60px;
+}
+
+.container .sidebar .heading {
+  width: 131px;
+  height: 18px;
+  line-height: 1;
+  font-size: 18px;
+  padding: 0 0 20px;
+  font-weight: 600;
+}
+
+.container .sidebarWrap {
+  padding: 20px;
+}
+
+.container .sidebarWrap section {
+  margin-bottom: 40px;
+}
+
+.container .sidebar .post {
+  display: flex;
+}
+
+.container .sidebar .post+.post {
+  margin-top: 20px;
+}
+
+.container .sidebar .latestArticle .image {
+  width: 100px;
+  height: 56px;
+}
+
+.container .sidebar .date {
+  height: 12px;
+  line-height: 1;
+}
+
+.container .sidebar .info {
+  width: 170px;
+  margin-left: 10px;
+}
+
+.container .sidebar .description {
+  margin-top: 2px;
+}
+.container .sidebar .tag {
+  margin-top: 0;
+
+}
+
+.container .sidebar .btn:nth-child(3n+1) {
+  margin-left: 0;
+
+}
+
+/*=====767px以下で切り替え=====*/
+@media (max-width: 767px) {
+
+  header nav{
+    display: none;
+  }
+
+  header .toggle{
+    display: block;
+  }
+
+  .container .inner{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .sidebar{
+    margin-left: 0;
+  }
+
+  .container .sidebar .postWrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .container .sidebar .post:nth-child(-n+2) {
+    margin-top: 0px;
+  }
+
+  .container .sidebar .post:nth-child(even) {
+    margin-left: 20px;
+  }
+
+}
+
